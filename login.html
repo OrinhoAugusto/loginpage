@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+
+        body {
+            background-color: rgb(187, 187, 187);
+        }
+
+        .elementos {
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            border-radius: 20px;
+            background-color: white;
+            margin: 200px auto;
+            display: block;
+            text-align: center;       
+        }
+
+        input {
+            width: 200px;
+            height: 30px;
+            margin: 5px;
+            border-radius: 7px;
+            border-color: white;
+        }
+
+        .submeter {
+            width: 100px;
+            height: 30px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            border-color: black;
+        }
+
+        .submeter:hover {
+            background-color: rgb(40, 40, 40);
+        }
+
+        input:hover {
+            background-color: rgb(236, 236, 236);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="elementos">
+        <h3>Login</h3>
+        <form>
+            <input id="usuario" type="text" placeholder="Usuário">
+            <input id="senha" type="password" placeholder="Senha">
+        </form>
+        <button class="submeter" onclick="logar(); return false">Enviar</button>
+    </div>
+
+    <script>
+        function logar() {
+            let usuario = document.getElementById('usuario').value;
+            let senha = document.getElementById('senha').value;
+
+            if (usuario == "augusto" && senha == "augusto") {
+                location.href = "home.html";
+            } else {
+                alert('Usuário ou senha incorretos');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
